@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
@@ -6,7 +6,29 @@ if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 ---@type LazySpec
 return {
 
-  -- == Examples of Adding Plugins ==
+  -- themes
+  { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {}, },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "iruzo/matrix-nvim", name = "matrix", priority = 1000},
+  { 'projekt0n/github-nvim-theme', name = 'github-theme', lazy = false, priority = 1000, config = function() require('github-theme').setup({}) vim.cmd('colorscheme github_dark') end, },
+
+  -- markdown
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
+  {
+  "tadmccorkle/markdown.nvim",
+  ft = "markdown", -- or 'event = "VeryLazy"'
+  opts = {
+    -- configuration here or empty for defaults
+  },
+  },
 
   "andweeb/presence.nvim",
   {
