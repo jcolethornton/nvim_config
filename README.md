@@ -1,10 +1,9 @@
-# AstroNvim Template
+# My Neovim confguration
 
-**NOTE:** This is for AstroNvim v4+
-
-#### Clone the repository
+#### Clone the repository to .config/nvim
 
 ```shell
+mv ~/.config/nvim ~/.config/nvim.bk
 git clone https://github.com/jcolethornton/nvim_config> ~/.config/nvim
 ```
 
@@ -19,3 +18,22 @@ Install plugins
 ```shell
 leader p
 ```
+## Other notes
+`
+sudo apt-get install -y \
+make \
+build-essential \
+libssl-dev \
+zlib1g-dev \
+libbz2-dev \
+libreadline-dev \
+libsqlite3-dev \
+wget \
+curl \
+llvm \
+libncurses5-dev \
+libncursesw5-dev \
+xz-utils \
+tk-dev \
+liblzma-dev
+`
