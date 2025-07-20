@@ -126,4 +126,9 @@ return {
 			)
 		end,
 	},
+	-- AstroVim polish function for global settings
+	polish = function()
+		-- Disable swap files globally
+		vim.opt.swapfile = false
+	end,
 }
